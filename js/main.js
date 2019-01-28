@@ -160,8 +160,29 @@
 		});	
 	};
 
-	
-
+	var scrollTo = function() {
+        var resume = $('#resume-scroll');
+			resume.click(function() {
+            $('html,body').animate({
+                    scrollTop: $('#colorlib-services').offset().top
+				},
+				'slow');
+        });
+        var experience = $('#experience-scroll');
+        experience.click(function() {
+            $('html,body').animate({
+                    scrollTop: $('#colorlib-blog').offset().top
+                },
+                'slow');
+        });
+        var contact = $('#contact-scroll');
+        contact.click(function() {
+            $('html,body').animate({
+                    scrollTop: $('#footer').offset().top
+                },
+                'slow');
+        });
+	};
 
 	// Document on load.
 	$(function(){
@@ -170,6 +191,7 @@
 		counterWayPoint();
 		contentWayPoint();
 		owlCarouselFeatureSlide();
+		scrollTo();
 	});
 
 
